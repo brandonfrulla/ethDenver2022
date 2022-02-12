@@ -1,6 +1,7 @@
 const tmi = require('tmi.js');
 
 // Define configuration options
+// we need to get Daniel to set this data up in a .file and pull it from a file reader
 const opts = {
   identity: {
     username: null,
@@ -37,7 +38,7 @@ function onMessageHandler (target, context, msg, self) {
   }
 }
 
-// Function called when the "dice" command is issued
+// Function called when the "claim" command is issued
 function getViewTime (target) {
   // Twitch API / json parsing magic
   return 1;
