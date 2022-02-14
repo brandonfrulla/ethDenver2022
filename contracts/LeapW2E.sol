@@ -12,6 +12,7 @@ contract LeapW2E is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, E
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() initializer {}
 
+//initialize function may not be required since LEAP already minted
     function initialize() initializer public {
         __ERC20_init("Leap", "LEAP");
         __ERC20Burnable_init();
@@ -32,9 +33,10 @@ contract LeapW2E is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, E
         _unpause();
     }
 
-    function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
-    }
+//ERC20 Token already minted
+    // function mint(address to, uint256 amount) public onlyOwner {
+    //     _mint(to, amount);
+    // }
 
     function _beforeTokenTransfer(address from, address to, uint256 amount)
         internal
