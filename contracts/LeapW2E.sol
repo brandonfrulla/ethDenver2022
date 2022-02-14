@@ -45,4 +45,19 @@ contract LeapW2E is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, E
     {
         super._beforeTokenTransfer(from, to, amount);
     }
+
+    function checkWallet (address from, address to, uint256 amount) public payable onlyOwner {
+        //confirm wallet is registered, if not register
+    }
+
+    function recordPoap (address from, address to, uint256 amount) public payable onlyOwner {
+        //add or confirm the POAP is recorded
+        //potentially do math on time watched
+    }
+
+    function payUser (address from, address to, uint256 amount) public payable onlyOwner {
+        //send ERC20 to the user (msg.sender)
+        //failback or max on tokens that can be sent per transaction
+    }
+
 }
