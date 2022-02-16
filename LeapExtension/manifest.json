@@ -20,18 +20,6 @@
         "matches": ["https://www.google.com/*",
                     "https://www.youtube.com/*"],
         
-        "css": ["main.css"]
-    }],
-    "permissions": [
-        "https://www.youtube.com/",
-        "storage"
-      ],
-      "web_accessible_resources": [
-        "styles/style.css",
-        "/images/leap.png",
-        "/images/leap.png",
-        "/images/leap.png",
-        "/images/leap.png",
-        "/images/leap.png"
-      ]
+        "css": ["main.css"] 
+    }]
 }
