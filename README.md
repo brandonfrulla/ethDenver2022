@@ -8,7 +8,9 @@ Testing github repo commit
 File directory
 + Contracts
     - TokenFactory.sol - initial setup file using OZ wizard
-    - Migrations.sol - standard
+    - Migrations.sol - standard truffle build file
+    - IERC20.sol - 
+    - multiSigWallet.sol - 
 + Test
    - Truffle test files corresponding to contracts
    - 
