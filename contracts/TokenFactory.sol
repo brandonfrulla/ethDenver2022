@@ -69,7 +69,7 @@ contract TokenFactory is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeab
 
 
     // The following functions are overrides required by Solidity. 
-    // From OpenZepplin
+    // From OpenZepplin Contract Wizard
 
     function _afterTokenTransfer(address from, address to, uint256 amount)
         internal
