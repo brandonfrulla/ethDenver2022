@@ -1,12 +1,14 @@
 #EthDenver 2022 init commit
 
+[![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
+
+
 Testing github repo commit
 
 File directory
 + Contracts
-    - LeapW2E.sol - initial setup file using OZ wizard
+    - TokenFactory.sol - initial setup file using OZ wizard
     - Migrations.sol - standard
-    - SimpleBank.sol - test file with example contracts
 + Test
    - Truffle test files corresponding to contracts
    - 

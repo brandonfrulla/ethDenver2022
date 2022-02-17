@@ -1,0 +1,193 @@
+{
+  "contractName": "TokenFactory",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.2+commit.661d1103\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/TokenFactory.sol\":\"TokenFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/TokenFactory.sol\":{\"keccak256\":\"0xd01ad6fdadf78006f687149a1d8b7d35d78a1f7daab1adde267bd73b1d66ab98\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://37421243fdd4db7157e8b633f03a55af7b6f23df7e0e021a49f6f12af4b55a5d\",\"dweb:/ipfs/QmX9MUmNwYoSsZJV8PnDtLFyfnyJRh85XmEjjRF6S1Hnwx\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122082ad97c22037fe9c5dd8e765ee1ea553d5c223f56f91821d9d178fddcbaa2d3b64736f6c63430008020033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122082ad97c22037fe9c5dd8e765ee1ea553d5c223f56f91821d9d178fddcbaa2d3b64736f6c63430008020033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "66:54:14:-:0;;;92:26;;;;;;;;;;66:54;;;;;;",
+  "deployedSourceMap": "66:54:14:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract TokenFactory {\n  constructor() public {\n  }\n}\n",
+  "sourcePath": "/Users/vincent/Documents/GitHub/Leap/ethDenver2022/contracts/TokenFactory.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/TokenFactory.sol",
+    "exportedSymbols": {
+      "TokenFactory": [
+        2108
+      ]
+    },
+    "id": 2109,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2103,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2108,
+        "linearizedBaseContracts": [
+          2108
+        ],
+        "name": "TokenFactory",
+        "nameLocation": "75:12:14",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2106,
+              "nodeType": "Block",
+              "src": "113:5:14",
+              "statements": []
+            },
+            "id": 2107,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2104,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "103:2:14"
+            },
+            "returnParameters": {
+              "id": 2105,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "113:0:14"
+            },
+            "scope": 2108,
+            "src": "92:26:14",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2109,
+        "src": "66:54:14"
+      }
+    ],
+    "src": "32:89:14"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/TokenFactory.sol",
+    "exportedSymbols": {
+      "TokenFactory": [
+        2108
+      ]
+    },
+    "id": 2109,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2103,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2108,
+        "linearizedBaseContracts": [
+          2108
+        ],
+        "name": "TokenFactory",
+        "nameLocation": "75:12:14",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2106,
+              "nodeType": "Block",
+              "src": "113:5:14",
+              "statements": []
+            },
+            "id": 2107,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2104,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "103:2:14"
+            },
+            "returnParameters": {
+              "id": 2105,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "113:0:14"
+            },
+            "scope": 2108,
+            "src": "92:26:14",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2109,
+        "src": "66:54:14"
+      }
+    ],
+    "src": "32:89:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.2+commit.661d1103.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-16T04:40:17.630Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
