@@ -2,24 +2,27 @@
     "manifest_version": 2,
     "name": "Leap (Watch To Earn!)",
     "description": "Leap tracks your watchtime for spcific streamers and reward you with tokens accordingly",
-    "version": "1.0",
+    "version": "0.1",
     "author": "Leap Foundation",
     "icons": { 
-        "16": "/images/leap.png",
-        "48": "/images/leap.png",
-        "128": "/images/leap.png" 
-    },
-    "page_action": {
-        "default_icon": { 
-          "16": "/images/leap.png",       
-          "48": "/images/leap.png", 
-          "128": "/images/leap.png"   
-        }
+        "16": "/images/leap_logo_16.png",
+        "48": "/images/leap_logo_48.png",
+        "128": "/images/leap_logo_128.png" 
     },
     "content_scripts": [{
-        "matches": ["https://www.google.com/*",
-                    "https://www.youtube.com/*"],
-        
-        "css": ["main.css"] 
-    }]
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["js/content.js"]
+    }],
+    "background": {
+        "scripts": ["./js/background.js"]
+      },
+    "browser_action": {
+        "default_icon": "/images/leap_logo_128.png",
+        "default_popup": "index.html",
+        "default_title": "Leap (Watch To Earn)"
+    },
+    "permissions": [
+        "tabs",
+        "https://www.youtube.com/*"  
+    ]
 }
