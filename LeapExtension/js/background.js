@@ -5,9 +5,9 @@
 - It checks the current tab you are in and if it was on a ytb video 
   we execute the foreground script to track watchTime
 
-- we nee to make sure to excute script only once on each tab.
+- we need to make sure to excute script only once on each tab.
 
-- We nee to figure out why excuting foreground works on mac but not on windows
+- We need to figure out why excuting foreground works on mac but not on windows
 */
 
 console.log('from background');
