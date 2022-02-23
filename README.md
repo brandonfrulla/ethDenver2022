@@ -13,8 +13,9 @@ File directory
     - IERC20Metadata.sol - extension of interface functionality
     - multiSigWallet.sol - Excerpt sol contract from github. For full Readme refer to
          https://github.com/OpenZeppelin/gnosis-multisig#ethereum-multisignature-wallet
++ Gnosis-multisig
+  + contracts, migrations, etc included
 + Test
    - Truffle test files corresponding to contracts
    - 
 
-OriginalLeapContract.sol - copy from Etherscan of Leap contract deployed
