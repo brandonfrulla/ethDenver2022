@@ -3,18 +3,18 @@
     "name": "Leap (Watch To Earn!)",
     "description": "Leap tracks your watchtime for spcific streamers and reward you with tokens accordingly",
     "version": "0.1",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvTuVflXcjyncmK+XRkFhGg+KGoF7mQ4WaUB9joEGhEBq+GV/WaTraq29BneofT4VH1l65rp121+QknOsRrAfL5iHyKm4EayQbPwDHYkcYjRB5LcR7pF8+MC23p5hpjV2DXhuYhoUOfCmoVbDnK8h52sI94NE3re75wv9P2POKPINHwdxOkOF6w5+qLkFIrAlTb9tGk+kymQjNZocjgtmYJ9KxsIcRVWi9o6iK58zoULVqyGPjEplF5pLKON46tCr3WJRuXvV/6E/V6wjBitXUBNhqPD3/8mq4kOZg87psShqK5cY5y2PyH7KCjF6BfHx2s+VUJ1JU7kQss6BNeLt2wIDAQAB",
     "author": "Leap Foundation",
     "icons": { 
         "16": "/images/leap_logo_16.png",
         "48": "/images/leap_logo_48.png",
         "128": "/images/leap_logo_128.png" 
     },
-    "content_scripts": [{
-        "matches": ["https://www.youtube.com/*"],
-        "js": ["js/content.js"]
-    }],
     "background": {
-        "scripts": ["./js/background.js"]
+        "scripts": [
+            "./js/background.js",
+            "./js/jsrsasign-all-min.js"
+        ]
       },
     "browser_action": {
         "default_icon": "/images/leap_logo_128.png",
@@ -22,7 +22,9 @@
         "default_title": "Leap (Watch To Earn)"
     },
     "permissions": [
+        "identity",
         "tabs",
-        "https://www.youtube.com/watch*" 
+        "https://www.youtube.com/watch*",
+        "https://www.twitch.tv/"
     ]
 }

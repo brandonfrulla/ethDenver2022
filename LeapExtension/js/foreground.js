@@ -13,25 +13,33 @@ var startTime, endTime;
 var video = document.querySelector('video');
 console.log("is the vid paused? " + video.paused);
 
-if(!video.paused) {
-    startTime = performance.now();
+//this helps us identify if this video is live or not on ytb
+var liveBadge = document.querySelector('.ytp-live-badge');
+var live = liveBadge && !liveBadge.getAttribute('disabled');
+console.log("is this video live? " + live);
+
+if(live) {
+    if(!video.paused) {
+        startTime = performance.now();
+    }
+    
+    video.onplaying = function() {
+        console.log("PLAYING");
+        startTime = performance.now();
+    };
+    
+    video.onpause = function() {
+        console.log("STOPPED");
+        endTime = performance.now();
+        var timeDiff = endTime - startTime; 
+        timeDiff /= 1000;
+        var seconds = Math.round(timeDiff);
+        totalWatchTime += seconds;
+        console.log("you watched for this amount of seconds: " + seconds);
+        console.log("this is your total watchtime in seconds so far: " + totalWatchTime);
+    }
 }
 
-video.onplaying = function() {
-    console.log("PLAYING");
-    startTime = performance.now();
-};
-
-video.onpause = function() {
-    console.log("STOPPED");
-    endTime = performance.now();
-    var timeDiff = endTime - startTime; 
-    timeDiff /= 1000;
-    var seconds = Math.round(timeDiff);
-    totalWatchTime += seconds;
-    console.log("you watched for this amount of seconds: " + seconds);
-    console.log("this is your total watchtime in seconds so far: " + totalWatchTime);
-}
 
 
 
