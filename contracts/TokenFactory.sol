@@ -18,12 +18,12 @@ contract TokenFactory is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeab
     constructor() initializer {}
 
     function initialize() initializer public {
-        __ERC20_init("Leep", "LEEP");
+        __ERC20_init("Leap Token", "L3AP");
         __ERC20Burnable_init();
         __ERC20Snapshot_init();
         __Ownable_init();
         __Pausable_init();
-        __ERC20Permit_init("Leep");
+        __ERC20Permit_init("L3AP");
 
         _mint(msg.sender, 420000000000 * 10 ** decimals());
     }
@@ -60,6 +60,7 @@ contract TokenFactory is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeab
     function confirmTime (address from, address to, uint256 amount) public payable onlyOwner {
         //confirm the time watched 
         //potentially do math on time watched, randomize
+        //extension will have a time tracker / channel name depending on twitch / youtube, etc.
     }
 
     function payUser (address from, address to, uint256 amount) public payable onlyOwner {
