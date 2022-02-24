@@ -6,6 +6,7 @@
 File directory
 + Contracts
     - TokenFactory.sol - initial setup file using OZ wizard
+        - includes simplebak contract for wallet deposit/withdraw functions
     - Migrations.sol - standard truffle build file
     - 
 + Gnosis-multisig
