@@ -3,8 +3,6 @@
 [![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
 
 
-Testing github repo commit
-
 File directory
 + Contracts
     - TokenFactory.sol - initial setup file using OZ wizard
