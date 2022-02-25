@@ -1,4 +1,4 @@
-const TokenFactoryTesting = artifacts.require("TokenFactoryTesting");
+//const TokenFactoryTesting = artifacts.require("TokenFactoryTesting");
 
 /*
  * uncomment accounts to access the test accounts made available by the
@@ -15,14 +15,14 @@ const { catchRevert } = require("./exceptionsHelpers.js");
 var TokenFactory = artifacts.require("./TokenFactory.sol");
 
 
-contract("TokenFactoryTesting", function (accounts) {
+contract("SimpleBank", function (accounts) {
   const owner = accounts[0]
   const alice = accounts[1]
   const bob = accounts[2]
   const deposit = web3.utils.toBN(2)
 
   beforeEach(async () => {
-    instance = await SimpleBank.new()
+    instance = await TokenFactory.new()
   })
 
   it("should mark addresses as enrolled", async () => {
