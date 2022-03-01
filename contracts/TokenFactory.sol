@@ -98,38 +98,32 @@ contract SimpleBank {
 
     /* State variables
      */
-    
     // We want to protect our users balance from other contracts
-   
     mapping (address => uint) private balances ;
     
     // We want to create a getter function and allow contracts to be able
     //       to see if a user is enrolled.
     mapping (address => bool) public enrolled;
 
-    // Let's make sure everyone knows who owns the bank, yes, fill in the
+    // Let's make sure everyone knows who owns the bank, 
     address public owner = msg.sender;
 
     /* Events - publicize actions to external listeners
      */
-    
     event LogEnrolled(address accountAddress);
-
     event LogDepositMade(address accountAddress, uint amount);
-
     event LogWithdrawal(address accountAddress, uint withdrawAmount, uint newBalance);
 
     /* Functions
      */
-
     // Fallback function - Called if other functions don't match call or
     // sent ether without data
     // Typically, called when invalid data is sent
     // Added so ether sent to this contract is reverted if the contract fails
     // otherwise, the sender's money is transferred to contract
-    function fallback() external payable {
-        revert();
-    }
+    // fallback() external payable {
+    //     revert();
+    // }
 
     /// @notice Get balance
     /// @return The balance of the user
@@ -159,14 +153,10 @@ contract SimpleBank {
       return balances[msg.sender];
 
       // 1. Add the appropriate keyword so that this function can receive ether
-    
-      // 2. Users should be enrolled before they can make deposits
-
+      // 2. Users should be enrolled before they can make deposit
       // 3. Add the amount to the user's balance. Hint: the amount can be
       //    accessed from of the global variable `msg`
-
       // 4. Emit the appropriate event associated with this function
-
       // 5. return the balance of sndr of this transaction
     }
 
@@ -174,11 +164,15 @@ contract SimpleBank {
     /// @dev This does not return any excess ether sent to it
     /// @param withdrawAmount amount you want to withdraw
     /// @return The balance remaining for the user
-    function withdraw(uint withdrawAmount) public returns (uint) {
+    function withdraw(uint withdrawAmount) public payable returns (uint) {
 
       require (balances[msg.sender] >= withdrawAmount);
-      msg.sender.transfer(withdrawAmount);
+     
       balances[msg.sender] = balances[msg.sender] - withdrawAmount;
+       
+       //msg.sender.transfer(withdrawAmount);
+      /// @dev - above line ompiliing with TypeError: "send" and "transfer" are only available for objects of type "address payable", not "address"
+
       emit LogWithdrawal(msg.sender, withdrawAmount, balances[msg.sender]);
       return balances[msg.sender];
 
@@ -188,10 +182,8 @@ contract SimpleBank {
       // return the user's balance.
 
       // 1. Use a require expression to guard/ensure sender has enough funds
-
       // 2. Transfer Eth to the sender and decrement the withdrawal amount from
       //    sender's balance
-
       // 3. Emit the appropriate event for this message
     }
 }
